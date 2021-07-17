@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Josefin+Sans:wght@300&display=swap");
+h1 {
+  font-family: "Amaranth";
+  color: #FFD842;
+  font-size: 7.5rem;
+  line-height: 1;
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+h2 {
+  font-family: "Amaranth";
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Amaranth";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Amaranth";
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+h5 {
+  font-family: "Amaranth";
+  font-size: 1rem;
+  line-height: 2.5;
+  margin: 0;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  line-height: 2;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Josefin Sans";
+}
+
+* {
+  box-sizing: border-box;
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-3 {
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+.m-4 {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+}
+
+.m-5 {
+  margin-top: 175px !important;
+  margin-bottom: 175px !important;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Josefin Sans";
+  color: #262625;
+}
+
+a:hover {
+  color: #80807d;
+}
+
+nav {
+  padding-top: 40px;
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+}
+
+nav {
+  pointer-events: none;
+  top: 0;
+}
+nav a {
+  color: white;
+  pointer-events: all;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.5s;
+}
+nav a:hover {
+  color: #cececeee;
+  transition: color 0.5s;
+}
+
+footer {
+  background-color: #262625;
+  padding-top: 20px;
+  color: white;
+  width: 100vw;
+}
+footer .column {
+  min-width: 200px;
+}
+footer .column a {
+  margin-right: 7px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.5s;
+}
+footer a:hover {
+  color: #cececeee;
+  transition: color 0.5s;
+}
+footer .disclaimer {
+  align-items: center;
+  background-color: #434345;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.txt-btn {
+  font-family: "Amaranth";
+  font-weight: 300;
+  font-size: 1.1rem;
+  transition: color 0.25s, fill 0.25s;
+}
+.txt-btn svg {
+  transition: margin-left 0.5s;
+}
+
+.txt-btn:hover {
+  color: #a6a6a6;
+  fill: #a6a6a6 !important;
+  transition: color 0.25s, fill 0.25s;
+}
+.txt-btn:hover svg {
+  margin-left: 10px;
+  transition: margin-left 0.5s;
+}
+
+input {
+  padding: 13px 25px;
+  min-width: 330px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button, .btn {
+  background-color: #FFD842;
+  color: #262625;
+  padding: 10px 35px;
+  text-transform: uppercase;
+  max-height: 42px;
+  border: none;
+  letter-spacing: 1px;
+  transition: background-color 0.25s;
+}
+
+button:focus, .btn:focus {
+  outline: none;
+}
+
+button:hover, .btn:hover {
+  background-color: #f5c200;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.header {
+  background-color: #262625;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header .container {
+  display: flex;
+}
+.header .container img {
+  width: 645px;
+  height: 100vh;
+  object-fit: cover;
+}
+.header .container a {
+  color: white;
+  fill: white;
+  margin-left: 400px;
+}
+.header .container a:hover {
+  color: #80807d;
+  fill: #80807d !important;
+}
+
+.header-info {
+  width: 924px;
+  height: 100vh;
+}
+
+.header-zusatzinfo {
+  position: absolute;
+  bottom: 40px;
+}
+.header-zusatzinfo h4, .header-zusatzinfo h5 {
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  display: inline;
+}
+
+#benefits {
+  width: 33.3vw;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#benefits .flex {
+  flex-wrap: nowrap;
+  min-width: 160px;
+}
+#benefits img {
+  height: 30px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+#benefits p {
+  margin: 0;
+  font-family: "Amaranth";
+}
+
+#info-1 .info-1-img {
+  width: 37%;
+}
+#info-1 img {
+  width: 100%;
+}
+
+.info-1-textblock {
+  width: 50%;
+  margin-left: 100px;
+}
+
+.img-galerie {
+  justify-content: space-between;
+}
+
+#info-2 {
+  justify-content: space-between;
+}
+#info-2 div {
+  width: 47.5%;
+}
+#info-2 div img {
+  width: 100%;
+}
+
+#newsletter {
+  min-height: 287px;
+  background-image: url("../../assets/img/newsletter.jpg");
+  background-size: cover;
+  padding: 30px 170px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+#newsletter h3 {
+  color: white;
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 1550px) {
+  .container {
+    width: 100vw;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 920px) {
+  #info-1 .info-1-img {
+    width: 100%;
+  }
+  #info-1 .info-1-textblock {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #info-2 div {
+    width: 100%;
+  }
+
+  #newsletter {
+    padding: 30px 30px;
+  }
+
+  .header-zusatzinfo a {
+    margin-left: 20px !important;
+  }
+}
+@media (max-width: 770px) {
+  .header {
+    background-image: url("../../assets/img/img1.jpg");
+    background-size: cover;
+  }
+  .header img {
+    display: none;
+  }
+
+  .img-galerie img {
+    margin: 15px auto;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header h1 {
+    margin: 0;
+    position: absolute;
+    bottom: 110px;
+    width: 90%;
+  }
+
+  #newsletter * {
+    margin: 15px 0;
+  }
+
+  .column {
+    margin: 15px 0;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

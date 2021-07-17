@@ -1,0 +1,333 @@
+// IMPORT
+// Fonts
+// Amaranth + Josefin Sans
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Josefin+Sans:wght@300&display=swap')
+
+// Variablen
+$c1: #FFD842
+$bg: #262625
+$bgLight: #e4e4e4
+
+// FONTS
+h1
+    font-family: 'Amaranth'
+    color: $c1
+    font-size: 7.5rem
+    line-height: 1
+    -moz-hyphens: auto
+    -o-hyphens: auto
+    -webkit-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+
+h2
+    font-family: 'Amaranth'
+    font-size: 3rem
+    font-weight: 700
+    text-transform: uppercase
+    margin: 0
+
+h3
+    font-family: 'Amaranth'
+    font-size: 2rem
+    font-weight: 300
+
+h4
+    font-family: 'Amaranth'
+    font-size: 1.7rem
+    font-weight: 300
+
+h5
+    font-family: 'Amaranth'
+    font-size: 1rem
+    line-height: 2.5
+    margin: 0
+    font-weight: 300
+
+p
+    font-family: 'Josefin Sans'
+    font-weight: 300
+    line-height: 2
+
+.bold
+    font-weight: 700
+
+.underline
+    text-decoration: underline!important
+
+.text-center
+    text-align: center
+
+body
+    margin: 0
+    overflow-x: hidden
+    font-family: 'Josefin Sans'
+
+*
+    box-sizing: border-box
+    -moz-hyphens: auto
+    -o-hyphens: auto
+    -webkit-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+
+.container
+    width: 1440px
+    margin: 0 auto
+
+.my-auto
+    margin-top: auto
+    margin-bottom: auto
+
+.flex
+    display: flex
+    flex-wrap: wrap
+
+.m-3
+    margin-top: 60px!important
+    margin-bottom: 60px!important
+
+.m-4
+    margin-top: 100px!important
+    margin-bottom: 100px!important
+
+.m-5
+    margin-top: 175px!important
+    margin-bottom: 175px!important
+
+a
+    text-decoration: none
+    font-family: 'Josefin Sans'
+    color: $bg
+
+a:hover
+    color: lighten($bg, 35)
+
+nav
+    padding-top: 40px
+    position: fixed
+    width: 100vw
+    max-width: 100%
+
+nav
+    pointer-events: none
+    top: 0
+    a
+        color: white
+        pointer-events: all
+        text-decoration: none
+        margin-right: 20px
+        transition: color 0.5s
+    
+    a:hover
+        color: #cececeee
+        transition: color 0.5s
+
+footer
+    background-color: $bg
+    padding-top: 20px
+    color: white
+    width: 100vw
+    .column
+        min-width: 200px
+        a
+            margin-right: 7px
+
+    a
+        color: white
+        text-decoration: none
+        line-height: 1.5
+        transition: color 0.5s
+    
+    a:hover
+        color: #cececeee
+        transition: color 0.5s
+
+    .disclaimer
+        align-items: center
+        background-color: #434345
+        display: flex
+        height: 60px
+        justify-content: center
+        margin-top: 30px
+        padding: 0 20px
+        width: 100%
+
+.txt-btn
+    font-family: 'Amaranth'
+    font-weight: 300
+    font-size: 1.1rem
+    transition: color 0.25s, fill 0.25s
+    svg
+        transition: margin-left 0.5s
+    
+.txt-btn:hover
+    color: darken(white, 35)
+    fill: darken(white, 35)!important
+    transition: color 0.25s, fill 0.25s
+    svg
+        margin-left: 10px
+        transition: margin-left 0.5s
+
+input
+    padding: 13px 25px
+    min-width: 330px
+    border: none
+input:focus
+    outline: none
+
+button, .btn
+    background-color: $c1
+    color: $bg
+    padding: 10px 35px
+    text-transform: uppercase
+    max-height: 42px
+    border: none
+    letter-spacing: 1px
+    transition: background-color 0.25s
+button:focus, .btn:focus
+    outline: none
+button:hover, .btn:hover
+    background-color: darken($c1, 15)
+    cursor: pointer
+    transition: background-color 0.25s
+
+// Header
+.header
+    background-color: $bg
+    width: 100vw
+    height: 100vh
+
+.header
+    .container
+        display: flex
+        img
+            width: 645px
+            height: 100vh
+            object-fit: cover
+        a
+            color: white
+            fill: white
+            margin-left: 400px
+        a:hover
+            color: lighten($bg, 35)
+            fill: lighten($bg, 35)!important
+
+.header-info
+    width: 924px
+    height: 100vh
+
+.header-zusatzinfo
+    position: absolute
+    bottom: 40px
+    h4,h5
+        color: white
+        margin: 0
+        line-height: 1.3
+        display: inline
+
+// Benefits
+#benefits
+    width: 33.3vw
+    margin: 0 auto
+    justify-content: space-between
+    .flex
+        flex-wrap: nowrap
+        min-width: 160px
+    img
+        height: 30px
+        margin-right: 15px
+        margin-bottom: 25px
+    p
+        margin: 0
+        font-family: 'Amaranth'
+
+// Info 1
+#info-1
+    .info-1-img
+        width: 37%
+    img
+        width: 100%
+.info-1-textblock
+    width: 50%
+    margin-left: 100px
+
+.img-galerie
+    justify-content: space-between
+
+// Info-2
+#info-2
+    justify-content: space-between
+    div
+        width: 47.5%
+        img
+            width: 100%
+
+// Newsletter
+#newsletter
+    min-height: 287px
+    background-image: url('../../assets/img/newsletter.jpg')
+    background-size: cover
+    padding: 30px 170px
+    box-sizing: border-box
+    justify-content: space-between
+    align-items: center
+    h3
+        color: white
+        display: inline-block
+        margin: 0
+
+// Breakpoints
+@media (max-width: 1550px)
+    .container
+        width: 100vw//calc(100vw - 60px)
+        padding-left: 30px
+        padding-right: 30px
+
+@media (max-width: 920px)
+    #info-1
+        .info-1-img
+            width: 100%
+        .info-1-textblock
+            margin-left: 0
+            width: 100%
+    #info-2
+        div
+            width: 100%
+
+    #newsletter
+        padding: 30px 30px
+
+    .header-zusatzinfo
+        a
+            margin-left: 20px!important
+    
+@media (max-width: 770px)
+    .header
+        background-image: url('../../assets/img/img1.jpg')
+        background-size: cover
+        img
+            display: none
+
+    .img-galerie
+        img
+            margin: 15px auto
+
+@media (max-width: 450px)
+    .container
+        padding-left: 20px
+        padding-right: 20px
+
+    .header
+        h1
+            margin: 0
+            position: absolute
+            bottom: 110px
+            width: 90%
+
+    #newsletter
+        *
+            margin: 15px 0
+
+    .column
+        margin: 15px 0

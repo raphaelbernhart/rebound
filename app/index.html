@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebound - After Workout Lotion</title>
+
+    <!-- User Stylings -->
+    <link rel="stylesheet" href="./core/css/global.css">
+</head>
+
+<body>
+
+    <!-- Back to raphaelbernhart.at Button -->
+    <a id="back-to-rbat-button" class="hide" href="https://raphaelbernhart.at/" style="position: fixed; left: 20px; top: 20px; background-color: #3a3a3a; color: rgb(255, 255, 255); border-radius: 15px; padding: 18px 22px; display: flex; align-items: center; justify-content: center; box-shadow: rgba(0, 0, 0, 0.25) 0 7px 10px; z-index: 500; cursor: pointer; transition: 0.5s; opacity: 1;">
+        <svg style="margin-right: 8px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="5 0 20 20"><title>chevron-left</title><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.707 5.293a1 1 0 0 1 0 1.414L9.414 10l3.293 3.293a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0z" fill="white"></path></g></svg>
+        <div>
+            <p style="line-height: 1; margin: 0; padding-top: 3px;">
+                Back to <span style="font-weight: 700;">raphaelbernhart.at</span>
+            </p>
+        </div>
+        <style>
+            #back-to-rbat-button.hide {
+                opacity: 0;
+                transform: translateY(-50);
+                transition: .5s;
+            }
+        </style>
+        <script defer>
+            var backToRbatButton = document.querySelector('#back-to-rbat-button');
+
+            var lastScroll = 0;
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY >= lastScroll && window.scrollY >= 200) hideBackToRbatButton()
+                else showBackToRbatButton()
+
+                lastScroll = window.scrollY
+            })
+
+            function hideBackToRbatButton() {
+                backToRbatButton.style.opacity = 0
+                backToRbatButton.style.transform = "translate(-50px,0)"
+            }
+            function showBackToRbatButton() {
+                backToRbatButton.style.opacity = 1
+                backToRbatButton.style.transform = "translate(0,0)"
+            }
+        </script>
+    </a>
+
+    <nav>
+        <div class="container">
+            <a href=""><img src="./assets/svg/logo-icon.svg" alt=""></a>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="container">
+            <div class="header-info flex">
+                <h1 class="my-auto">Rebound</h1>
+                <div class="header-zusatzinfo">
+                    <h5>Rebound</h5><br>
+                    <h4>After Workout Lotion</h4>
+                    <a class="txt-btn" href="">Buy now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><g><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></g></svg></a>
+                </div>
+            </div>
+            <img src="./assets/img/img1.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="benefits" class="flex m-4">
+        <div class="flex">
+            <img src="./assets/svg/shipping.svg" alt="Shipping Icon">
+            <p>Fast delivery</p>
+        </div>
+        <div class="flex">
+            <img src="./assets/svg/heart.svg" alt="Heart Icon">
+            <p>Good for heart</p>
+        </div>
+        <div class="flex">
+            <img src="./assets/svg/lightning.svg" alt="Lightning Icon">
+            <p>Restores Energy</p>
+        </div>
+    </div>
+
+    <div id="info-1" class="container flex">
+        <div class="info-1-img">
+            <img src="./assets/img/lotion-01/lotion-01.jpg" alt="">
+        </div>
+        <div class="info-1-textblock my-auto">
+            <h2>The lotion <br>against the after <br>workout exhaustion</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
+            <a class="txt-btn" href="">Buy now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><g><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></g></svg></a>
+        </div>
+    </div>
+
+    <div class="img-galerie container m-3 flex">
+        <img src="./assets/img/lotion-01/thumb1.jpg" alt="">
+        <img src="./assets/img/lotion-01/thumb2.jpg" alt="">
+        <img src="./assets/img/lotion-01/thumb3.jpg" alt="">
+        <img src="./assets/img/lotion-01/thumb4.jpg" alt="">
+        <img src="./assets/img/lotion-01/thumb5.jpg" alt="">
+        <img src="./assets/img/lotion-01/thumb6.jpg" alt="">
+    </div>
+
+    <div id="info-2" class="container flex m-5">
+        <div>
+            <h2 class="m-3">Perfect for professionals and hobby athletes</h2>
+            <img src="./assets/img/sports01.jpg" alt="">
+        </div>
+        <div>
+            <img src="./assets/img/sports02.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.<br><br>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <a class="txt-btn" href="">Buy now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><g><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></g></svg></a>
+        </div>
+    </div>
+
+    <div id="newsletter" class="container flex m-5">
+            <h3>Subscribe to our newsletter and <br>receive exclusive offers every week</h3>
+            <input type="text" name="newsletter-mail" placeholder="Enter your E-Mail">
+            <button>Subscribe</button>
+    </div>
+
+    <footer>
+        <div class="container flex">
+            <div class="column">
+                <h5>Company</h5>
+                <a href="terms-of-service.php">Terms of Service</a><br>
+                <a href="privacy-policy.php">Privacy Policy</a>
+            </div>
+            <div style="margin-top: 10px" class="column">
+                <a href=""><img src="./assets/svg/social-media/instagram.svg" alt=""></a>
+                <a href=""><img src="./assets/svg/social-media/facebook.svg" alt=""></a>
+                <a href=""><img src="./assets/svg/social-media/youtube.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <span class="text-center">This is just a demo site. No products or services are getting sold. <br><a class="bold underline" target="_blank" href="https://raphaelbernhart.at">raphaelbernhart</a></span>
+        </div>
+    </footer>
+
+    <!-- Global JS -->
+    <script src="./core/js/global.js"></script>
+</body>

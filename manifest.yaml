@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-rebound
+  namespace: personal
+spec:
+  selector:
+    matchLabels:
+      app: demo-rebound
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: demo-rebound
+    spec:
+      containers:
+      - name: demo-rebound
+        image: registry.raphaelbernhart.at/raphaelbernhart/demo-rebound:1.0.2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "35M"
+            cpu: "30m"
+          limits:
+            memory: "70M"
+            cpu: "60m"
+      imagePullSecrets:
+      - name: regcred
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-rebound
+  namespace: personal
+  annotations:
+    metallb.universe.tf/address-pool: production-public-ips
+spec:
+  selector:
+    app: demo-rebound
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: demo-rebound
+  namespace: personal
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    # To add trailing slash at the end of the url (solves path problem)
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^([^.?]*[^/])$ $1/ redirect;
+spec:
+  tls:
+  - hosts:
+    - demo.raphaelbernhart.at
+    secretName: demo-raphaelbernhart-at-tls
+  rules:
+  - host: demo.raphaelbernhart.at
+    http:
+      paths:
+      - path: /rebound(/|$)(.*)
+        backend:
+          serviceName: demo-rebound
+          servicePort: 80

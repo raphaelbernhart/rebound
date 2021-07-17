@@ -1,0 +1,12 @@
+{
+  "name": "rebound",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker-build": "docker build -t registry.raphaelbernhart.at/raphaelbernhart/demo-rebound:$npm_package_version .",
+    "docker-push": "docker push registry.raphaelbernhart.at/raphaelbernhart/demo-rebound:$npm_package_version"
+  },
+  "author": "",
+  "license": "ISC"
+}
